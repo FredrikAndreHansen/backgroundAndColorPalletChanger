@@ -41,8 +41,11 @@ $image3 = $imagePath + "img3.jpg";
 $image4 = $imagePath + "img4.jpg";
 $image5 = $imagePath + "img5.jpg";
 $image6 = $imagePath + "img6.png";
+$image7 = $imagePath + "img7.jpg";
+$image8 = $imagePath + "img8.jpg";
+$image9 = $imagePath + "img9.jpg";
 
-$SetBackground = Get-Random -Minimum 0 -Maximum 6;
+$SetBackground = Get-Random -Minimum 0 -Maximum 9;
 
 
 if ($SetBackground -eq 0) {
@@ -63,4 +66,13 @@ if ($SetBackground -eq 0) {
 } elseif ($SetBackground -eq 5) {
     Set-DesktopBackground -Path $image6;
     Set-AccentColor -Color 5;
+} elseif ($SetBackground -eq 6) {
+    Set-DesktopBackground -Path $image7;
+    Set-AccentColor -Color 6;
+} elseif ($SetBackground -eq 7) {
+    Set-DesktopBackground -Path $image8;
+    Set-AccentColor -Color 7;
+} elseif ($SetBackground -eq 8) {
+    Set-DesktopBackground -Path $image9;
+    Set-AccentColor -Color 8;
 }

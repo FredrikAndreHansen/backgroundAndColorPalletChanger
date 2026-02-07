@@ -67,8 +67,14 @@ if ($settingsWindow) {
         Select-Seafoam
     } elseif ($Color -eq 5) {
         Select-Palered
+    } elseif ($Color -eq 6) {
+        Select-Metalblue
+    } elseif ($Color -eq 7) {
+        Select-Green
+    } elseif ($Color -eq 8) {
+        Select-Storm
     }
-
+    
     # Change the color
     [System.Windows.Forms.SendKeys]::SendWait("{ENTER}")
     Start-Sleep -Milliseconds 200
@@ -135,6 +141,42 @@ function Select-Seafoam {
 function Select-Palered {
     for ($i = 0; $i -lt 8; $i++) {
         [System.Windows.Forms.SendKeys]::SendWait("{RIGHT}")
+        Start-Sleep -Milliseconds 80
+    }
+}
+
+function Select-Metalblue {
+    for ($i = 0; $i -lt 8; $i++) {
+        [System.Windows.Forms.SendKeys]::SendWait("{RIGHT}")
+        Start-Sleep -Milliseconds 80
+    }
+
+    for ($i = 0; $i -lt 3; $i++) {
+        [System.Windows.Forms.SendKeys]::SendWait("{DOWN}")
+        Start-Sleep -Milliseconds 80
+    }
+}
+
+function Select-Green {
+    for ($i = 0; $i -lt 4; $i++) {
+        [System.Windows.Forms.SendKeys]::SendWait("{DOWN}")
+        Start-Sleep -Milliseconds 80
+    }
+
+    for ($i = 0; $i -lt 3; $i++) {
+        [System.Windows.Forms.SendKeys]::SendWait("{RIGHT}")
+        Start-Sleep -Milliseconds 80
+    }
+}
+
+function Select-Storm {
+    for ($i = 0; $i -lt 5; $i++) {
+        [System.Windows.Forms.SendKeys]::SendWait("{RIGHT}")
+        Start-Sleep -Milliseconds 80
+    }
+
+    for ($i = 0; $i -lt 4; $i++) {
+        [System.Windows.Forms.SendKeys]::SendWait("{DOWN}")
         Start-Sleep -Milliseconds 80
     }
 }
