@@ -1,4 +1,22 @@
-﻿$FullPath = "C:\Users\fredr\Documents\Projects\Scripts\BackgroundChanger\";
+﻿Add-Type @"
+using System;
+using System.Runtime.InteropServices;
+
+public class Wallpaper {
+    [DllImport("user32.dll", SetLastError = true)]
+    public static extern bool SystemParametersInfo(int uAction, int uParam, string lpvParam, int fuWinIni);
+}
+
+public class WinAPI {
+    [DllImport("user32.dll")]
+    public static extern bool SetForegroundWindow(IntPtr hWnd);
+
+    [DllImport("user32.dll")]
+    public static extern bool ShowWindowAsync(IntPtr hWnd, int nCmdShow);
+}
+"@;
+
+$FullPath = "C:\Users\fredr\Documents\Projects\Scripts\BackgroundChanger\";
 
 . $FullPath\Set-AccentColor.ps1;
 . $FullPath\Set-DesktopBackground.ps1;
