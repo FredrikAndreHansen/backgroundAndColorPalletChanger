@@ -16,6 +16,8 @@ public class WinAPI {
 }
 "@;
 
+Start-Sleep -Seconds 10;
+
 $FullPath = "C:\Users\fredr\Documents\Projects\Scripts\BackgroundChanger\";
 
 . $FullPath\Set-AccentColor.ps1;
@@ -37,6 +39,3 @@ $SetRandomBackground = Get-Random -Minimum 0 -Maximum $allImages.Length;
 
 Set-DesktopBackground -Path $allImages[$SetRandomBackground];
 Set-AccentColor -Color $SetRandomBackground;
-
-[System.Windows.Forms.SendKeys]::Flush()
-Start-Sleep -Milliseconds 200
