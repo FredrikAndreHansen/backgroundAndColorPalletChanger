@@ -37,3 +37,6 @@ $SetRandomBackground = Get-Random -Minimum 0 -Maximum $allImages.Length;
 
 Set-DesktopBackground -Path $allImages[$SetRandomBackground];
 Set-AccentColor -Color $SetRandomBackground;
+
+[System.Windows.Forms.SendKeys]::Flush()
+Start-Sleep -Milliseconds 200
