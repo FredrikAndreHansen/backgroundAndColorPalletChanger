@@ -16,7 +16,7 @@ public class WinAPI {
 }
 "@;
 
-Start-Sleep -Seconds 20;
+Start-Sleep -Seconds 30;
 
 $FullPath = "C:\Users\fredr\Documents\Projects\Scripts\BackgroundChanger\";
 
